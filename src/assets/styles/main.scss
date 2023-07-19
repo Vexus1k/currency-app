@@ -1,0 +1,27 @@
+@import "elements/input";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button {
+  box-sizing: border-box;
+}
+
+html {
+  word-break: break-word;
+  hyphens: auto;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: 'Jost', sans-serif;
+  font-size: 16px;
+  line-height: 21px;
+  color: #fcfcfc;
+  font-weight: 400;
+  background-color: #1a1a1e !important;
+}

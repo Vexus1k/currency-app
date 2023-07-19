@@ -11,6 +11,8 @@
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
+    "noImplicitAny": false,
+    "strictPropertyInitialization": false,
     "declaration": false,
     "downlevelIteration": true,
     "experimentalDecorators": true,
