@@ -53,6 +53,10 @@
             </div>
           </div>
         </div>
+        <div class="button_wrapper">
+          <button (click)="page = page - 1; initHistoryRequests(page)">prev</button>
+          <button (click)="page = page + 1; initHistoryRequests(page);">next</button>
+        </div>
       </div>
     </div>
   </div>

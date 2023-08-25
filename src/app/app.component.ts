@@ -30,6 +30,7 @@ export class AppComponent implements OnInit {
   public currencyCode = '';
   public username = '';
   public historyRequests: IHistoryRequest[] = [];
+  public page = 1;
 
   public constructor(
     private readonly _route: ActivatedRoute,
@@ -63,8 +64,8 @@ export class AppComponent implements OnInit {
     );
   }
 
-  public initHistoryRequests(): void {
-    this._currentService.getHistoryRequestsOfUser().pipe(finalize(() => {
+  public initHistoryRequests(page = 1): void {
+    this._currentService.getHistoryRequestsOfUser(page).pipe(finalize(() => {
       this._cdr.detectChanges();
     }) ).subscribe(
       (res) => {
@@ -74,6 +75,7 @@ export class AppComponent implements OnInit {
       },
       () => {
         alert('Error: Something went wrong while getting requests history.');
+        this.page = 1;
       }
     );
   }

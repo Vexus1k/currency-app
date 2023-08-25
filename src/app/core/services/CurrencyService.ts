@@ -23,7 +23,7 @@ export class CurrencyService {
     return this._http.post<{value: number}>(`${this._basePath}/get-current-currency-value-command`, requestData);
   }
 
-  public getHistoryRequestsOfUser(): Observable<IHistoryRequest[]> {
-    return this._http.get<IHistoryRequest[]>(`${this._basePath}/requests`);
+  public getHistoryRequestsOfUser(page: number): Observable<IHistoryRequest[]> {
+    return this._http.get<IHistoryRequest[]>(`${this._basePath}/requests/${page}`);
   }
 }
